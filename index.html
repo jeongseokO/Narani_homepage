@@ -136,6 +136,22 @@
   .card h3 { font-size: 18px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 9px; }
   .card p { color: var(--text2); font-size: 14.5px; }
 
+  /* download */
+  .dl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  @media (max-width: 760px) { .dl-grid { grid-template-columns: 1fr; } }
+  .dl-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; }
+  .dl-top { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+  .dl-top .ic { width: 46px; height: 46px; border-radius: 12px; background: rgba(124,123,255,0.12); border: 1px solid rgba(124,123,255,0.25); display: grid; place-items: center; color: var(--accent); flex: none; }
+  .dl-top .ic.alt { background: rgba(77,208,225,0.12); border-color: rgba(77,208,225,0.28); color: var(--accent2); }
+  .dl-top .ic svg { width: 23px; height: 23px; }
+  .dl-top h3 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+  .dl-tag { font-size: 12.5px; color: var(--text3); font-family: var(--mono); }
+  .dl-card > p { color: var(--text2); font-size: 14.5px; margin-bottom: 18px; }
+  .dl-card code { font-family: var(--mono); font-size: 12.5px; background: var(--surface2); padding: 2px 6px; border-radius: 5px; color: var(--accent2); }
+  .os-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: auto; }
+  .btn.os { font-size: 13.5px; padding: 9px 14px; }
+  .dl-note { display: block; margin-top: 14px; font-size: 12px; color: var(--text3); line-height: 1.5; }
+
   /* philosophy */
   .philo { background: linear-gradient(180deg, transparent, rgba(124,123,255,0.05)); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .philo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
@@ -185,8 +201,8 @@
     </a>
     <div class="nav-links">
       <a href="#features">기능</a>
+      <a href="#download">다운로드</a>
       <a href="#philosophy">철학</a>
-      <a href="#providers">프로바이더</a>
       <a class="btn btn-ghost" href="https://github.com/jeongseokO/Narani_homepage" target="_blank" rel="noreferrer">GitHub</a>
     </div>
   </div>
@@ -198,9 +214,9 @@
     <h1>에이전트와 <span class="grad">나란히</span><br/>개발하다</h1>
     <p class="sub">Narani는 AI 에이전트를 단순한 코드 생성기가 아니라 함께 이해하고 소통하는 동료로 만듭니다. 의도를 컨셉 그래프로 공유하고, 팀의 에이전트끼리 git으로 작업물을 주고받습니다.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="https://github.com/jeongseokO/Narani_homepage" target="_blank" rel="noreferrer">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02.8-.22 1.65-.33 2.5-.34.85 0 1.7.12 2.5.34 1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10.01 10.01 0 0022 12c0-5.52-4.48-10-10-10z"/></svg>
-        GitHub에서 보기
+      <a class="btn btn-primary" href="#download">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        다운로드
       </a>
       <a class="btn btn-ghost" href="#features">기능 둘러보기</a>
     </div>
@@ -281,6 +297,55 @@
         <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4-3 7-7 9-4-2-7-5-7-9V7l7-4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
         <h3>공식 프로토콜 연결</h3>
         <p>비공식 파싱이 아니라 Claude Agent SDK·Codex app-server·Gemini ACP 같은 공식 경로로 안전하게 붙습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="download">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="eyebrow">다운로드</div>
+      <h2>앱으로, 또는 MCP만 가볍게</h2>
+      <p>전체 워크스페이스 앱을 받거나, 팀 협업 도구(MCP)만 따로 받아 쓰던 에이전트에 연결하세요.</p>
+    </div>
+    <div class="dl-grid">
+      <div class="dl-card reveal">
+        <div class="dl-top">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="13" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <div><h3>데스크톱 앱</h3><span class="dl-tag">Windows · macOS · Linux</span></div>
+        </div>
+        <p>에이전트 오케스트레이션, 컨셉 그래프, 코드 스페이스, 마켓플레이스까지 전부 담긴 본체.</p>
+        <div class="os-row">
+          <a class="btn btn-primary os" href="https://github.com/jeongseokO/Narani/releases/latest" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M3 5.5l7-1v7.5H3V5.5zm0 13l7 1v-7.4H3v6.4zM11 4.3L21 3v9h-10V4.3zM11 13h10v8l-10-1.4V13z"/></svg>
+            Windows
+          </a>
+          <a class="btn btn-ghost os" href="https://github.com/jeongseokO/Narani/releases/latest" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M17.05 12.04c-.03-2.6 2.12-3.85 2.22-3.91-1.21-1.77-3.09-2.01-3.76-2.04-1.6-.16-3.12.94-3.93.94-.81 0-2.06-.92-3.39-.89-1.74.03-3.35 1.01-4.25 2.57-1.81 3.14-.46 7.79 1.3 10.34.86 1.25 1.89 2.65 3.24 2.6 1.3-.05 1.79-.84 3.36-.84 1.57 0 2.01.84 3.39.81 1.4-.02 2.29-1.27 3.15-2.53.99-1.45 1.4-2.85 1.42-2.92-.03-.01-2.72-1.04-2.75-4.13zM14.6 4.7c.72-.87 1.2-2.08 1.07-3.28-1.03.04-2.28.69-3.02 1.56-.66.77-1.24 2-1.08 3.18 1.15.09 2.32-.59 3.03-1.46z"/></svg>
+            macOS
+          </a>
+          <a class="btn btn-ghost os" href="https://github.com/jeongseokO/Narani/releases/latest" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2c-2 0-3 2-3 4 0 1 .2 2 .2 3-.4.8-1.6 2.3-2.4 4.2-.9 2-1.6 3.2-2.3 3.8-.6.6-.3 1.5.5 1.6.6.1 1.2.5 1.6 1 .5.6 1.4.6 1.9 0 .6-.7 1.7-1.2 3-1.2s2.4.5 3 1.2c.5.6 1.4.6 1.9 0 .4-.5 1-.9 1.6-1 .8-.1 1.1-1 .5-1.6-.7-.6-1.4-1.8-2.3-3.8-.8-1.9-2-3.4-2.4-4.2 0-1 .2-2 .2-3 0-2-1-4-3-4z"/></svg>
+            Linux
+          </a>
+        </div>
+        <span class="dl-note">최신 릴리스 페이지로 이동합니다. 미서명 빌드라 첫 실행 시 macOS는 우클릭 → 열기가 필요할 수 있어요.</span>
+      </div>
+
+      <div class="dl-card reveal">
+        <div class="dl-top">
+          <div class="ic alt"><svg viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <div><h3>팀 MCP만</h3><span class="dl-tag">앱 불필요 · 어떤 클라이언트나</span></div>
+        </div>
+        <p><code>.narani</code> 컨셉 그래프·피드 협업 도구만 담은 작은 MCP 서버. 앱 없이 팀원의 Claude·Codex·Gemini에 바로 연결합니다. (코드 인덱스 등 앱 전용 도구는 제외)</p>
+        <div class="os-row">
+          <a class="btn btn-primary os" href="https://github.com/jeongseokO/Narani/releases/latest/download/narani-team-mcp.zip">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M12 3v12m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            narani-team-mcp.zip
+          </a>
+        </div>
+        <span class="dl-note">압축을 풀고 <code>npm install &amp;&amp; node server.js</code>. 포함 도구: orient · graph_* · feed_*</span>
       </div>
     </div>
   </div>
