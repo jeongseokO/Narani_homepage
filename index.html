@@ -381,7 +381,7 @@
             Linux
           </a>
         </div>
-        <span class="dl-note" data-i18n-html="dl.app_note">Click to download the installer directly. macOS defaults to Apple Silicon · <a href="https://github.com/jeongseokO/Narani-releases/releases/latest/download/Narani-mac-x64.dmg">Intel build</a>. Unsigned build — on first launch macOS may need right-click → Open.</span>
+        <span class="dl-note" data-i18n-html="dl.app_note">Click to download the installer directly. macOS defaults to Apple Silicon · <a href="https://github.com/jeongseokO/Narani-releases/releases/latest/download/Narani-mac-x64.dmg">Intel build</a>.<br/>Unsigned build — if macOS says it's "damaged", run once in Terminal: <code>xattr -dr com.apple.quarantine /Applications/Narani.app</code></span>
       </div>
 
       <div class="dl-card reveal">
@@ -519,7 +519,7 @@
     'dl.p': { en: 'Get the whole workspace, or grab only the team-collaboration MCP and connect it to the agents you already use.', ko: '전체 워크스페이스 앱을 받거나, 팀 협업 도구(MCP)만 따로 받아 쓰던 에이전트에 연결하세요.' },
     'dl.app_h': { en: 'Desktop app', ko: '데스크톱 앱' },
     'dl.app_p': { en: 'The full client — agent orchestration, concept graph, code space and marketplace.', ko: '에이전트 오케스트레이션, 컨셉 그래프, 코드 스페이스, 마켓플레이스까지 전부 담긴 본체.' },
-    'dl.app_note': { en: 'Click to download the installer directly. macOS defaults to Apple Silicon · <a href="https://github.com/jeongseokO/Narani-releases/releases/latest/download/Narani-mac-x64.dmg">Intel build</a>. Unsigned build — on first launch macOS may need right-click → Open.', ko: '클릭하면 설치 파일이 바로 다운로드됩니다. macOS는 Apple Silicon 기본 · <a href="https://github.com/jeongseokO/Narani-releases/releases/latest/download/Narani-mac-x64.dmg">Intel용</a>. 미서명 빌드라 첫 실행 시 macOS는 우클릭 → 열기가 필요할 수 있어요.' },
+    'dl.app_note': { en: 'Click to download the installer directly. macOS defaults to Apple Silicon · <a href="https://github.com/jeongseokO/Narani-releases/releases/latest/download/Narani-mac-x64.dmg">Intel build</a>.<br/>Unsigned build — if macOS says it\'s "damaged", run once in Terminal: <code>xattr -dr com.apple.quarantine /Applications/Narani.app</code>', ko: '클릭하면 설치 파일이 바로 다운로드됩니다. macOS는 Apple Silicon 기본 · <a href="https://github.com/jeongseokO/Narani-releases/releases/latest/download/Narani-mac-x64.dmg">Intel용</a>.<br/>미서명 빌드라 macOS가 "손상됨"이라고 하면 터미널에서 한 번 실행: <code>xattr -dr com.apple.quarantine /Applications/Narani.app</code>' },
     'dl.mcp_h': { en: 'Team MCP only', ko: '팀 MCP만' },
     'dl.mcp_tag': { en: 'No app · one terminal line', ko: '앱 불필요 · 터미널 한 줄' },
     'dl.mcp_p': { en: 'A tiny MCP server with only the <code>.narani</code> concept-graph and feed collaboration tools. No install or download — paste a line and connect. (App-only tools like the code index are excluded.)', ko: '<code>.narani</code> 컨셉 그래프·피드 협업 도구만 담은 작은 MCP 서버. 설치·다운로드 없이 아래를 터미널에 붙여넣어 바로 연결하세요. (코드 인덱스 등 앱 전용 도구는 제외)' },
